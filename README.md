@@ -1,2 +1,2 @@
-# web-scraper
-A simple Java web scraper, loosely based on Big Java Late Objects (by C. Horstmann)'s excercises P7.14 and P7.15
+# Wikipedia Scraper
+A simple web scraper. Finds all the internal wikipedia.org/wiki links on a given wiki page, and does the same for each of those. Finally, it prints a tree of links.
