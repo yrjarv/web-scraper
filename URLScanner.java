@@ -17,16 +17,16 @@ public class URLScanner {
     /**
      * Constructor, sets scanner
      * @param urlString The String with the URL this scanner should work for
+     * @throws Exception If the URL did not work for some reason, a generic Exception is thrown.
      */
-    public URLScanner(String urlString) {
+    public URLScanner(String urlString) throws Exception {
         try {
             URL url = new URI(urlString).toURL();
             scanner = new Scanner(url.openStream());
 
         } catch (URISyntaxException | IOException e) {
-            System.err.println("Bad URL: " + urlString);
+            throw new Exception("Bad link: " + urlString);
         }
-
     }
     /**
      * Gets all the target pages for all the links on the page
@@ -43,7 +43,6 @@ public class URLScanner {
                 result.add(href);
                 System.out.println("Link: " + href);
             }
-
         }
         return result;
     }
