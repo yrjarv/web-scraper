@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate documentation",
+            "type": "shell",
+            "command": "mkdir -p docs && javadoc -d docs *.java",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "javac *.java"
+        },
+        {
+            "label": "Remove compiled files",
+            "type": "shell",
+            "command": "rm *.class",
+            "problemMatcher": []
+        }
+    ]
+}
