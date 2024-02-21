@@ -16,14 +16,18 @@ public class LinkFinder {
             URLScanner link = new URLScanner(startURL);
             ArrayList<String> resultLinks = link.getAllLinks();
             for (String currentLink : resultLinks) {
-                if (currentLink.substring(0, 6).equals("/wiki/")) {
+                if (
+                    currentLink.contains("/wiki/")
+                    && !currentLink.contains(":")
+                    && !currentLink.contains("wikimedia")
+                    && !currentLink.contains(".m.wikipedia.org")
+                    && !currentLink.contains("Main_Page")
+                    ) {
                     wikipediaLinks.add(prefix + currentLink);
-                } else if (currentLink.contains(".wikipedia.org/wiki/")) {
-                    wikipediaLinks.add(currentLink);
                 }
             }
         } catch (Exception e) {
-            System.err.println("Not working");
+            System.err.println("Not working: " + e);
         }
         return wikipediaLinks;
     }
