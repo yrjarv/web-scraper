@@ -41,7 +41,6 @@ public class URLScanner {
             while (matcher.find()) {
                 String href = matcher.group(1);
                 result.add(href);
-                System.out.println("Link: " + href);
             }
         }
         return result;
