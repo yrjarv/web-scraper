@@ -22,6 +22,8 @@ public class LinkFinder {
                     && !currentLink.contains("wikimedia")
                     && !currentLink.contains(".m.wikipedia.org")
                     && !currentLink.contains("Main_Page")
+                    && !currentLink.contains("#")
+                    && !currentLink.contains("_(disambiguation)")
                     ) {
                     wikipediaLinks.add(prefix + currentLink);
                 }
