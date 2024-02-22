@@ -1,7 +1,8 @@
-/**Main class*/
-public class Main {
+/**Contains the main method for generating a tree of links*/
+public class Tree {
     /**
-     * The main program. Scrapes Wikipedia with a depth of 2, in order to preserve system resources
+     * The main program. Scrapes Wikipedia with a depth of 2, in order to preserve system resources.
+     * Prints a simple tree of what pages are linked to from the different pages.
      * @param args Should only contain one String, the link to the starting Wikipedia page
      */
     public static void main(String[] args) {
