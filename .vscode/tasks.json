@@ -10,7 +10,8 @@
         {
             "label": "Compile",
             "type": "shell",
-            "command": "javac *.java"
+            "command": "javac *.java",
+            "problemMatcher": []
         },
         {
             "label": "Remove compiled files",
